@@ -1,0 +1,55 @@
+@{
+    Layout = "~/Views/Shared/Slayout.cshtml";
+    ViewBag.Title = "Sign Up";
+}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow" style="width: 400px;">
+        <div class="card-body">
+            <h2 class="text-center mb-4">Sign Up</h2>
+            <form asp-action="Signup" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" class="form-control" name="Username" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-control" name="Email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" name="PasswordHash" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="form-control" name="ConfirmPassword" required>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </div>
+
+                <div class="mt-3 text-center">
+                    <p>Already have an account? <a href="#">Log In</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- Add custom CSS for styling -->
+<style>
+    .card {
+        border-radius: 0.5rem; /* Rounded corners */
+    }
+    .form-control {
+        border-radius: 0.375rem; /* Match Bootstrap's border radius */
+    }
+    .btn-primary {
+        border-radius: 0.375rem; /* Match Bootstrap's button style */
+    }
+</style>
